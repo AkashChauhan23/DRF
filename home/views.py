@@ -37,4 +37,13 @@ def put_student_details(request, id):
         serializer.save()
         return Response({'Status' : 200, 'msg' : 'Put query executed successfully...'})
     except Exception as e:
+        print("Exception occured---> ", e)
         return Response({'Respnse' : '403', 'msg' : 'Something went wrong...', 'error' : tb.format_exc()})
+
+@api_view(['PATCH'])
+def patch_student_details(request):
+    try:
+        pass
+    except Exception as e:
+        print("Exception occured---> ", e)
+        return Response({'Status' : '403', 'msg' : 'Something went wrong...', 'error' : tb.format_exc()})
